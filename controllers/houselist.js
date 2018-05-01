@@ -1,5 +1,5 @@
 
-const db = require("../models");
+//const db = require("../models");
 
 const houseModel = [{
   id: '23456',
@@ -44,7 +44,7 @@ const userModel = [
   }
 ];
 
-export { initialModel, userModel };
+export { houseModel, userModel };
 
 // Defining methods for the booksController
 /*module.exports = {

@@ -6,14 +6,17 @@ import * as userApi from '../../../routes/api/user';
 
 const MATCHING_ITEM_LIMIT = 25;
 
-class ListPage extends Component {
-    state = {
-        item: [],
-        showRemoveIcon: false,
-        searchValue: ""
-    };
-
-    handleSearchChange = e => {
+class ListPage extends React.Component {
+    constructor(){
+        super();
+        state = {
+            item: [],
+            showRemoveIcon: false,
+            searchValue: ""
+        };
+    } 
+    
+    handleSearchChange(e){
         const value = e.target.value;
 
         this.setState({
@@ -38,7 +41,7 @@ class ListPage extends Component {
         }
     };
 
-    handleSearchCancel = () => {
+    handleSearchCancel(){
         this.setState({
             item: [],
             showRemoveIcon: false,
@@ -46,7 +49,7 @@ class ListPage extends Component {
         });
     };
 
-    componentDidMount = () => {
+    componentDidMount(){
         let user = userApi.GetById('11111');
         let house = householdApi.GetById(user.houseId);
 
