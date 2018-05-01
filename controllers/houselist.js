@@ -6,17 +6,41 @@ const initialModel = {
     uniqueId: '',
     'user1': {
       isActive: true,
-      shoppingList: {
-        'chicken_noodle': 2,
-        'corn_flakes': 1
-      }
+      shoppingList: [
+        {
+          count: 2,
+          upc14: '00035200264013',
+          upc12: '035200264013',
+          brand: 'Riceland',
+          name: 'Riceland American Jazmine Rice'
+        },
+        {
+          count: 1,
+          upc14: '00011111065925',
+          upc12: '011111065925',
+          brand: 'Caress',
+          name: 'Caress Velvet Bliss Ultra Silkening Beauty Bar - 6 Ct'
+        }
+      ]
     },
     'user2': {
       isActive: true,
-      shoppingList: {
-        'chicken_noodle': 2,
-        'corn_flakes': 1
-      }
+      shoppingList: [
+        {
+          count: 2,
+          upc14: '00035200264013',
+          upc12: '035200264013',
+          brand: 'Riceland',
+          name: 'Riceland American Jazmine Rice'
+        },
+        {
+          count: 1,
+          upc14: '00011111065925',
+          upc12: '011111065925',
+          brand: 'Caress',
+          name: 'Caress Velvet Bliss Ultra Silkening Beauty Bar - 6 Ct'
+        }
+      ]
     }
   }
 };
