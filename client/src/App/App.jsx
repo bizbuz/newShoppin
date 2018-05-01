@@ -8,7 +8,7 @@ import { PrivateRoute } from '../_components';
 import { HomePage } from '../HomePage';
 import { LoginPage } from '../LoginPage';
 import { RegisterPage } from '../RegisterPage';
-import { ListPage } from '../ListPage';
+import ListPage from '../ListPage/ListPage';
 
 class App extends React.Component {
     constructor(props) {
@@ -36,10 +36,10 @@ class App extends React.Component {
                         }
                         <Router history={history}>
                             <div>
-                                <PrivateRoute exact path='/' component={ListPage} />
-                                {/* <Route path="/login" component={LoginPage} />
+                                <PrivateRoute exact path='/' component={HomePage} />
+                                <Route path="/login" component={LoginPage} />
                                 <Route path="/register" component={RegisterPage} /> 
-                                <Route path="/house-list" component={ListPage} />*/}
+                                <Route path="/house-list" component={ListPage} />
                             </div>
                         </Router>
                     </div>
