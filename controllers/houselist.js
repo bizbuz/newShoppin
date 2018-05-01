@@ -1,40 +1,53 @@
 
 const db = require("../models");
 
-const initialModel = {
-  'house1': {
-    uniqueId: '',
-    shoppingList: [
-      {
-        count: 2,
-        upc14: '00035200264013',
-        upc12: '035200264013',
-        brand: 'Riceland',
-        name: 'Riceland American Jazmine Rice'
-      },
-      {
-        count: 1,
-        upc14: '00011111065925',
-        upc12: '011111065925',
-        brand: 'Caress',
-        name: 'Caress Velvet Bliss Ultra Silkening Beauty Bar - 6 Ct'
-      }
-    ],
-    'users': [
-      {
-        name: 'kishon',
-        id: '11111'
-      },
-      {
-        name: 'steven',
-        id: '222222'
-      }
-    ]
+const houseModel = [{
+  id: '23456',
+  shoppingList: [
+    {
+      count: 2,
+      upc14: '00035200264013',
+      upc12: '035200264013',
+      brand: 'Riceland',
+      name: 'Riceland American Jazmine Rice'
+    },
+    {
+      count: 1,
+      upc14: '00011111065925',
+      upc12: '011111065925',
+      brand: 'Caress',
+      name: 'Caress Velvet Bliss Ultra Silkening Beauty Bar - 6 Ct'
+    }
+  ],
+  'users': [
+    {
+      name: 'kishon',
+      id: '11111'
+    },
+    {
+      name: 'steven',
+      id: '222222'
+    }
+  ]
+}];
+
+const userModel = [
+  {
+    name: 'kishon',
+    id: '11111',
+    houseId: '23456'
+  },
+  {
+    name: 'steven',
+    id: '222222',
+    houseId: '11111'
   }
-};
+];
+
+export { initialModel, userModel };
 
 // Defining methods for the booksController
-module.exports = {
+/*module.exports = {
 
   findAll: function(req, res) {
     db.Book
@@ -68,4 +81,4 @@ module.exports = {
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   }
-};
+};*/

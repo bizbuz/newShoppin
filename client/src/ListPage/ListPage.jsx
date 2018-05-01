@@ -1,9 +1,12 @@
-import React from "react";
-import Client from "./Client";
+import React, {Component} from "react";
+import * as householdApi from '../../../routes/api/household';
+import * as userApi from '../../../routes/api/user';
+
+//import Client from "./Client";
 
 const MATCHING_ITEM_LIMIT = 25;
 
-class IteamSearch extends React.Component {
+class IteamSearch extends Component {
     state = {
         item: [],
         showRemoveIcon: false,
@@ -27,11 +30,11 @@ class IteamSearch extends React.Component {
                 showRemoveIcon: true
             });
 
-            Client.search(value, foods => {
+            /*Client.search(value, foods => {
                 this.setState({
                     item: foods.slice(0, MATCHING_ITEM_LIMIT)
                 });
-            });
+            });*/
         }
     };
 
@@ -43,6 +46,14 @@ class IteamSearch extends React.Component {
         });
     };
 
+    componentDidMount = () => {
+        let user = userApi.GetById('11111');
+        let house = householdApi.GetById(user.houseId);
+
+        console.log(user);
+        console.log(house);
+    };
+    
     render() {
         const { showRemoveIcon, item } = this.state;
         const removeIconStyle = showRemoveIcon ? {} : { visibility: "hidden" };
