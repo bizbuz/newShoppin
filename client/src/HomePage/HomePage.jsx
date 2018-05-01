@@ -38,6 +38,7 @@ class HomePage extends React.Component {
                 }
                 <p>
                     <Link to="/login">Logout</Link>
+                    <Link to="/house-list" className="btn btn-link">House Shopping List</Link>
                 </p>
             </div>
         );
