@@ -1,6 +1,5 @@
 
 const db = require("../models");
-
 const initialModel = {
   'house1': {
     uniqueId: '',
