@@ -6,7 +6,7 @@ import * as userApi from '../../../routes/api/user';
 
 const MATCHING_ITEM_LIMIT = 25;
 
-class IteamSearch extends Component {
+class ListPage extends Component {
     state = {
         item: [],
         showRemoveIcon: false,
@@ -107,4 +107,4 @@ class IteamSearch extends Component {
     }
 }
 
-export default IteamSearch;
+export default ListPage;
