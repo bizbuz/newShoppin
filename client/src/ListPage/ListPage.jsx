@@ -9,7 +9,7 @@ const MATCHING_ITEM_LIMIT = 25;
 class ListPage extends React.Component {
     constructor(){
         super();
-        state = {
+        this.state = {
             item: [],
             showRemoveIcon: false,
             searchValue: ""
@@ -50,11 +50,14 @@ class ListPage extends React.Component {
     };
 
     componentDidMount(){
-        let user = userApi.GetById('11111');
-        let house = householdApi.GetById(user.houseId);
+        let user = userApi.GetById('11111')[0];
+        let house = householdApi.GetById(user.houseId)[0];
 
         console.log(user);
         console.log(house);
+        this.setState({
+            item: house.shoppingList
+        })
     };
     
     render() {
@@ -63,7 +66,7 @@ class ListPage extends React.Component {
 
         const foodRows = item.map((food, idx) => (
             <tr key={idx} onClick={() => this.props.onFoodClick(food)}>
-                <td>{food.description}</td>
+                <td>No Description</td>
                 <td className="right aligned">{food.name}</td>
                 <td className="right aligned">{food.brand}</td>
 
