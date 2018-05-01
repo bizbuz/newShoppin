@@ -1,6 +1,26 @@
 
 const db = require("../models");
 
+const initialModel = {
+  'house1': {
+    uniqueId: '',
+    'user1': {
+      isActive: true,
+      shoppingList: {
+        'chicken_noodle': 2,
+        'corn_flakes': 1
+      }
+    },
+    'user2': {
+      isActive: true,
+      shoppingList: {
+        'chicken_noodle': 2,
+        'corn_flakes': 1
+      }
+    }
+  }
+};
+
 // Defining methods for the booksController
 module.exports = {
 
