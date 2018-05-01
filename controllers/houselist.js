@@ -1,46 +1,31 @@
 
 const db = require("../models");
+
 const initialModel = {
   'house1': {
     uniqueId: '',
-    'user1': {
-      isActive: true,
-      shoppingList: [
-        {
-          count: 2,
-          upc14: '00035200264013',
-          upc12: '035200264013',
-          brand: 'Riceland',
-          name: 'Riceland American Jazmine Rice'
-        },
-        {
-          count: 1,
-          upc14: '00011111065925',
-          upc12: '011111065925',
-          brand: 'Caress',
-          name: 'Caress Velvet Bliss Ultra Silkening Beauty Bar - 6 Ct'
-        }
-      ]
-    },
-    'user2': {
-      isActive: true,
-      shoppingList: [
-        {
-          count: 2,
-          upc14: '00035200264013',
-          upc12: '035200264013',
-          brand: 'Riceland',
-          name: 'Riceland American Jazmine Rice'
-        },
-        {
-          count: 1,
-          upc14: '00011111065925',
-          upc12: '011111065925',
-          brand: 'Caress',
-          name: 'Caress Velvet Bliss Ultra Silkening Beauty Bar - 6 Ct'
-        }
-      ]
-    }
+    shoppingList: [
+      {
+        count: 2,
+        upc14: '00035200264013',
+        upc12: '035200264013',
+        brand: 'Riceland',
+        name: 'Riceland American Jazmine Rice'
+      },
+      {
+        count: 1,
+        upc14: '00011111065925',
+        upc12: '011111065925',
+        brand: 'Caress',
+        name: 'Caress Velvet Bliss Ultra Silkening Beauty Bar - 6 Ct'
+      }
+    ],
+    'users': [
+      {
+        'kishon': '1111111',
+        'steven': '2222222'
+      }
+    ]
   }
 };
 
