@@ -22,8 +22,12 @@ const initialModel = {
     ],
     'users': [
       {
-        'kishon': '1111111',
-        'steven': '2222222'
+        name: 'kishon',
+        id: '11111'
+      },
+      {
+        name: 'steven',
+        id: '222222'
       }
     ]
   }
